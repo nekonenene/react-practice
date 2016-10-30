@@ -1,17 +1,20 @@
 window.onload = function() {
   var hello = new Hello();
-  hello.say();
+  window.setInterval(() => hello.say(), 1000);
 };
 
 class Hello {
-  constructor() {
-    this.firstName = "Pepper";
-    this.lastName = "Hot";
+  constructor(firstName, lastName) {
+    this.firstName = firstName || "Pepper";
+    this.lastName = lastName || "Hot";
   }
 
   say() {
     const message = (
-      <p>Hello, {this.formatName()}!</p>
+      <div>
+        <p>Hello, {this.formatName()}!</p>
+        <p>{new Date().toLocaleTimeString()}</p>
+      </div>
     );
 
     ReactDOM.render(
