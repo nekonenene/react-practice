@@ -27,6 +27,10 @@ html(lang="ja")
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    // React & React-DOM
+    script(src="https://unpkg.com/react@15/dist/react.min.js")
+    script(src="https://unpkg.com/react-dom@15/dist/react-dom.min.js")
+
     // Zepto : CDN 上になければローカルから読み込み
     script(src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js")
     script.
@@ -39,6 +43,8 @@ html(lang="ja")
     #site-box
       #site-main
         h3 #{title}
+        #root
+
         #content
           p
             button.blue-button(type="button") あお

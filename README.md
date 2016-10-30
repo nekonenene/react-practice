@@ -1,5 +1,4 @@
-# Web Development Template
-
+# react-practice
 
 ## 開発するには……
 
@@ -7,7 +6,7 @@
 
 以下のようにコマンド
 ```
-git clone git@github.com:nekonenene/web-dev-template.git
+git clone git@github.com:nekonenene/react-practice.git
 ```
 
 ### 2. Node.js をインストール

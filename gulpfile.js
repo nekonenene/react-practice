@@ -83,7 +83,7 @@ gulp.task('babel', function(callback) {
     sourcemaps.init(),
     replace(/\t/g, '  '), // babel でネストが深くなるのでタブ文字を2文字スペースに
     babel({
-      presets: ['es2015']
+      presets: ['react', 'es2015']
     }),
     sourcemaps.write(),
     gulp.dest('./source/'),
