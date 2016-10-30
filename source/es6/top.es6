@@ -7,7 +7,10 @@ window.onload = function() {
 class Hello {
   say() {
     const message = (
-      <Clock />
+      <div>
+        <Clock />
+        <ClickButton />
+      </div>
     );
 
     ReactDOM.render(
@@ -50,6 +53,29 @@ class Clock extends React.Component {
         <p>Hello, {this.state.name}!</p>
         <p>It is {this.state.date.toLocaleTimeString()}.</p>
       </div>
+    );
+  }
+}
+
+class ClickButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttonMessage: "Click me"
+    };
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      buttonMessage: prevState.buttonMessage + "!"
+    }));
+  }
+
+  render() {
+    return (
+      <button className="blue-button" onClick={ev => this.handleClick(ev)}>
+        {this.state.buttonMessage}
+      </button>
     );
   }
 }
